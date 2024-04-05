@@ -6,9 +6,17 @@
 
 class SimpleButton{
   public:
+    SimpleButton(int pin, bool input_pullup = true);
+    bool get_click();
+    bool get_state();
 
   private:
-  
+    int pin;
+    bool input_pullup;
+    bool state = false;
+    bool last_state = false;
+
+
 };
 
 
